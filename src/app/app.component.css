@@ -1,0 +1,28 @@
+#right, #left {
+    display: inline-block;
+    vertical-align: top; 
+    margin: 40px; 
+}
+
+#main {
+    border: 1px solid black;
+    width: 800px; 
+    height: 300px; 
+    padding: 10px; 
+}
+
+#one {
+    color: red; 
+}
+
+#two {
+    color: orange; 
+}
+
+#four {
+    color: green; 
+}
+
+#five {
+    color: blue; 
+}

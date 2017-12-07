@@ -1,0 +1,28 @@
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<div id="main">
+
+<div id="right">
+  <h1>GitHub Score</h1>
+  <form (submit)="onSubmit()" name="myForm" #myForm="ngForm">
+    Github Username: <input required minlength="2" maxlength="30" type="text" [(ngModel)]="username" name="username"><br><br>
+    <button type="submit" [disabled]="!myForm.form.valid">Calculate Github Score</button>
+  </form>
+</div>
+
+
+
+<div id="left">
+  <h2>Your Score: {{score}}</h2>
+
+  
+  <h4 id="one" *ngIf=" score < 20">Needs work!</h4>
+  <h4 id="two" *ngIf="score < 50 && score > 20">A decent start!</h4>
+  <h4 *ngIf="score < 100 && score > 50">Doing good!</h4>
+  <h4 id="four" *ngIf="score < 200 && score > 100">Great job!</h4>
+  <h4 id="five" *ngIf="score <= 200">Github Elite!</h4>
+</div>
+
+</div>
